@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formularios</title>
+</head>
+<body>
+    
+    <h1>trabalhando com tegs para formularios</h1>
+    <hr>
+    <p>elementos para formularios são voltados á interação do usuario
+        entrada de dados, seleção de opções, processamento para manipualção dados entre outros
+    </p>
+
+    <p>formularios  o html são um <i>interface</i></p>
+    <p>para que o formulario funcione é necessario combina-los com algumas
+        linguagem de programação
+    </p>
+    <form action="#" method="post"><!--<form> define o formulario, action = destino do formulario, method = define a forma de envio do formulario -->
+
+        <div> <!--<div> container generico de bloco, ultil para agrupar elementos sem significado semantico-->
+
+        </div>
+        <label for="nome">nome</label> <!--<label> é o titulo do campo, vinculado ao campo via for/id-->
+
+            <input type="text" id="nome" name="" placeholder="digite seu nome" required> <!--input é um campo de entrada de dados typr difinido qual o tip de dados a ser recebido (text é campo de texto livre); id identificador unico do campo para label ee scripts; name é nome do campo  usado no envio  do formulario, palceholder dica textual dentro do campo required éa de dizer que o campo é obrigatório-->
+
+            <p>escolha um instrumento</p>
+
+                <p>
+                    <input type="radio" name="corda" id="instrumento-violao" value="violao">
+
+                    <label for="instrumento-violao">violão</label>
+                    
+
+            </p>
+
+            <p>interesses</p>
+            <p>
+                <input type="checkbox" name="interesse" id="interesse-html5" value="html5" >
+                <!--type é o checkbox: opção de mutipla escolha, id significa o controle; name: array de opção; o value: é o valor
+                enviado ao selecionar
+                -->
+                <label for="interesse-html5html6"></label>
+                <p>
+                    <label for="nascimento">nascimento</label>
+                    <input type="date" id="nascimento" name="nascimento">
+                    <!--type date e selector de data, id/nome para envio de dados-->
+
+                </p>
+                <p>
+
+               
+                  <label for="cor">qual sua cor favorita</label>
+                 <input type="color" id="cor" name="cor">
+                <p>
+
+                 <label for="idade">qual dua idade</label>
+                 <input type="number" name="idade" id="idade" min="0" max="150">
+                </p>
+
+                <p>
+
+            <label for="assunto">assunto</label>
+            <select name="assunto" id="assunto">
+                <option value="">selecione um assunto</option>
+            </select>
+
+            <p>
+                <label for="mensagem">mensagem</label>
+                <textarea name="mensagem" id="mensagem" cols="50" rows="5"></textarea>
+
+
+            </p>
+
+            <button type="submit">enviar</button>
+            </form>
+
+            
+
+
+
+
+        </p>
+
+            
+
+
+
+            </p>
+            
+
+    
+</body>
+</html>
