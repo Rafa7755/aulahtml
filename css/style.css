@@ -1,0 +1,72 @@
+h1{
+    color: red;
+}
+ 
+p{
+    color: blue;
+}
+ 
+a{
+    background-color: #0b2555;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 15px;
+    border: solid purple 2px;
+    width: 30px;
+}
+ 
+a:link{
+    color: #6cff00;
+}
+ 
+a:hover{
+    background-color: rgb(26, 21, 15);
+    color: palegoldenrod;
+}
+ 
+a:active{
+    background-color: red;
+    color: black;
+}
+ 
+button:link{
+    color: #6cff00;
+}
+ 
+button:visited{
+    color: black;
+    background-color: yellow;
+}
+ 
+button:hover{
+    background-color: aquamarine;
+    color: #0b2555;
+}
+ 
+p::first-line{
+    color: red;
+    font-variant: small-caps;
+}
+ 
+p::first-letter{
+    color: magenta;
+    font-size: xx-large;
+}
+ 
+h3::before{
+    content: url(/img/lupa\ \(1\).webp);
+}
+ 
+h3::after{
+    content: url(/img/lupa\ \(1\).webp);
+}
+ 
+::marker{
+    color: #6cff00;
+}
+::selection{
+    color:#0b2555;
+    background-color: beige;
+}
+ 
