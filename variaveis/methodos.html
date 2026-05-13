@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* ordenando array
+
+        o método sort() ordena os elementos dde um array alfabeticamente ou numericamente.
+
+        o metodo sort() altera o  array original e retorna o arry ordenado
+        por padrão, a ordenação é feita lafabetica crescente.
+        para ordenar numericamente, é necessario passar por uma função de comparação como argumento
+        a função de comparação recebe dois paramentros (a e b) e retorna um valor negativo, positivo ou zero, 
+        dependendo da comparação entre a e b
+
+        se a função dede ccomparação retorna uma valor negativo,
+         a ordenação sera feita em ordem  crescente.
+
+        se a função de comparação retorna co o valor positivo, 
+        a oredenação sera feita em ordem decrescente.
+
+        se afunção de comparação retorna zero, os elementos permanecerão inalterados*/
+
+        /* numeros.sort((a,b) => a - b) // ordena de forma crescente
+         console.log(numeros)
+ 
+          numeros.sort((a,b) => b - a)// ordena de forma decrescente
+         console.log(numeros)*/
+
+      animais = ["cachorro", "porco", "camelo", "boi"]
+
+         console.log(animais.length)
+
+         console.log(animais[0])
+
+         animais.push("leão")
+
+         /*adiconando e removendo elementos de um aary
+
+         adcionando elemento
+         esxistem dois tipos de metodos principaispara adicionar elementos
+         um array
+
+         metodo push*/
+
+         frutas = ['uva', 'banana', 'maça ', 'laranja']
+
+         console.log(frutas)
+
+         console.log(frutas.push('manga'))
+         console.log(frutas)
+
+         /* methodo unshift()*/
+
+         frutas.unshift("morango")
+         console.log(frutas)
+
+         /*remover elemento*/
+         //dofinal//
+
+         frutas.pop();
+         console.log(frutas)
+
+         /*metodo shift() - remove do inicio*/
+
+         frutas.shift()
+
+         console.log(frutas)
+
+         animal = ['cachorro', 'tigre', 'leão', 'camelo']
+
+         for(i=0;i<animais.length;i++){
+            console.log(animais[i])
+         }
+        
+        //laço de repetição for...of//
+
+        for(animal of animais){
+            console.log(animal)
+        }
+
+        //laço de repetição forEach
+
+        animais.forEach(animal=>console.log(animal))
+
+        //metodos uteis paraa manipualação de arrays
+
+        //  indexof() - encontra o indice de um elemento
+
+        let cores =['roxo', 'vermelho', 'branco,']
+
+        console.log(cores.indexOf('vermelho'))
+
+        // splice() - remove ou substitui elementos
+
+        console.log(cores.splice(1,2))
+        console.log(cores)
+
+        //slice() -  retorna parte de um array
+
+        console.log(cores.slice[2,1])
+        console.log(cores)
+
+        //map() - retorna um novo array modificado
+
+       //numeros = [40, 100, 1, 5, 25, 10];
+        /*dobro = numeros.map(function(num){
+            console.log(num*2)
+        }
+        )*/
+
+       /* let positivo = prompt("digite um numero")
+
+        let pares = numeros.filter(function(positivo){
+        }
+    )
+
+          if(positivo < 0){
+          console.log("esse numero é positivo")
+            
+          }
+          else{
+              console.log("esse numero negativo")
+        }*/
+
+    aluno = ['rafael', 'isaque', 'guilherme', 'kaua']
+
+    console.log(aluno.length)
+
+    console.log(aluno.push('deivid'))
+    console.log(aluno)
+
+    console.log(aluno.unshift('renan'))
+    console.log(aluno)
+
+    console.log(aluno.shift('isaque'))
+    console.log(aluno)
+
+    </script>
+</body>
+</html>
