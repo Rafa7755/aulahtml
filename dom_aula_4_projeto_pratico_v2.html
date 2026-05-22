@@ -207,7 +207,7 @@
                 id="input-tarefa" 
                 placeholder="Adicione uma nova tarefa..."
             >
-            <button>Adicionar</button>
+            <button onclick="adicionarTarefa()">Adicionar</button>
         </div>
 
         <!-- ============================================ -->
@@ -249,6 +249,93 @@
             </button>
         </div>
     </div>
+    <script>
+ 
+        let tarefas = [];
+ 
+        //Funcao de adicionar
+        function adicionarTarefa(){
+            const inputTarefa = document.getElementById('input-tarefa')
+ 
+            const texto = inputTarefa.value.trim()
+ 
+            if(texto == ''){
+                alert('Por favor, digite uma tarefa')
+                return;
+            }
+ 
+            const tarefa = {
+                id: Date.now(),
+                texto: texto,
+                concluida: false
+            }
+ 
+            tarefas.push (tarefa)
+            inputTarefa.value = '';
+            inputTarefa.focus();
+ 
+            console.log("tarefa adicionada", tarefa);
+ 
+            renderizarTarefas()
+        }
+ 
+        function renderizarTarefas() {
+            const listaTarefas = document.getElementById('lista-tarefas')
+ 
+            if (tarefas.length === 0){
+                listaTarefas.innerHTML = `Nenhuma tarefa adicionada. Comece agora!`
+                listaTarefas.className = 'lista-vazia';
+                return;
+            }
+ 
+            listaTarefas.className - ' ';
+            listaTarefas.innerHTML = ' ';
+ 
+            tarefas.forEach(tarefas=>{
+                const divTarefa = document.createElement('div')
+ 
+                divTarefa.className = 'tarefa';
+ 
+                if (tarefas.concluida){
+                    div.classList.add('concluida')
+ 
+                }
+ 
+                const checkbox = document.createElement('input');
+                checkbox.type = 'checkbox';
+                checkbox.className = 'checkbox';
+                checkbox.checked = tarefas.concluida;
+                //checkbox.onchange = () => alterarTarefa(tarefa.id)
+ 
+                const textoTarefa = document.createElement('span');
+                textoTarefa.className = 'texto-tarefa';
+                textoTarefa.textContent = tarefas.texto;
+ 
+                const botaoDeletar = document.createElement('button')
+                botaoDeletar.className = 'botao-deletar'
+                botaoDeletar.textContent = 'Deletar'
+                botaoDeletar.onclick = () => deletarTarefa(tarefa.id)
+ 
+                divTarefa.appendChild(checkbox)
+                divTarefa.appendChild(textoTarefa)
+                divTarefa.appendChild(botaoDeletar)
+ 
+                listaTarefas.appendChild(divTarefa)
+               
+            })
+        }
+ 
+        function alterarTarefa(id) {
+            const tarefa = tarefa.find(t => t.id === id)
+ 
+            if (tarefa) {
+                tarefa.concluida = !tarefa.concluida;
+                renderizarTarefas()
+                atualizarEstatisticas()
+            }
+        }
+
+    </script>
 
 </body>
 </html>

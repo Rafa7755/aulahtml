@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,28 +13,33 @@
             padding: 20px;
             background-color: #f5f5f5;
         }
+
         .container {
             background-color: white;
             padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             margin-bottom: 20px;
         }
+
         h1 {
             color: #333;
             border-bottom: 3px solid #ff9800;
             padding-bottom: 10px;
         }
+
         h2 {
             color: #555;
             margin-top: 30px;
         }
+
         .exemplo {
             background-color: #f9f9f9;
             border-left: 4px solid #ff9800;
             padding: 15px;
             margin: 15px 0;
         }
+
         .resultado {
             background-color: #fff3e0;
             border: 1px solid #ff9800;
@@ -41,6 +47,7 @@
             margin: 10px 0;
             border-radius: 4px;
         }
+
         button {
             background-color: #ff9800;
             color: white;
@@ -51,9 +58,11 @@
             margin: 5px;
             font-size: 14px;
         }
+
         button:hover {
             background-color: #e68900;
         }
+
         #elemento-estilo {
             padding: 20px;
             margin: 10px 0;
@@ -62,12 +71,14 @@
             color: #000;
             font-size: 16px;
         }
+
         code {
             background-color: #f4f4f4;
             padding: 2px 6px;
             border-radius: 3px;
             font-family: 'Courier New', monospace;
         }
+
         .info-box {
             background-color: #e3f2fd;
             border: 1px solid #2196f3;
@@ -75,6 +86,7 @@
             border-radius: 4px;
             margin: 10px 0;
         }
+
         .box-exemplo {
             width: 100px;
             height: 100px;
@@ -85,31 +97,33 @@
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <h1>🎨 Manipulação de DOM - Aula 3: Modificando Estilos</h1>
-        
+
         <p>Nesta aula aprenderemos como modificar os estilos CSS dos elementos usando JavaScript.</p>
 
         <!-- ============================================ -->
         <!-- EXEMPLO 1: Propriedade style -->
         <!-- ============================================ -->
         <h2>1️⃣ Modificando Estilos - Propriedade style</h2>
-        
+
         <div class="exemplo">
             <p>A propriedade <code>style</code> permite modificar estilos CSS diretamente.</p>
             <p>Sintaxe: <code>elemento.style.propriedade = "valor"</code></p>
             <div class="info-box">
-                💡 <strong>Nota:</strong> Propriedades CSS com hífen (como background-color) viram camelCase em JavaScript (backgroundColor)
+                💡 <strong>Nota:</strong> Propriedades CSS com hífen (como background-color) viram camelCase em
+                JavaScript (backgroundColor)
             </div>
         </div>
 
         <div id="elemento-estilo">Este elemento terá seus estilos modificados</div>
 
-        <button>Mudar Cor de Fundo</button>
-        <button>Mudar Tamanho da Fonte</button>
-        <button>Mudar Borda</button>
-        <button>Restaurar</button>
+        <button onclick="mudarCor()">Mudar Cor de Fundo</button>
+        <button onclick="mudarTamanho()">Mudar Tamanho da Fonte</button>
+        <button onclick=" mudarBordar()">Mudar Borda</button>
+        <button onclick="Restaurar()">Restaurar</button>
 
         <div class="resultado" id="resultado1"></div>
 
@@ -117,7 +131,7 @@
         <!-- EXEMPLO 2: Múltiplos Estilos -->
         <!-- ============================================ -->
         <h2>2️⃣ Modificando Múltiplos Estilos</h2>
-        
+
         <div class="exemplo">
             <p>Podemos modificar vários estilos de uma vez.</p>
         </div>
@@ -126,7 +140,7 @@
             Elemento com múltiplos estilos
         </div>
 
-        <button>Aplicar Múltiplos Estilos</button>
+        <button onclick="aplicarMultiplosEstilos()">Aplicar Múltiplos Estilos</button>
         <button>Restaurar</button>
 
         <div class="resultado" id="resultado2"></div>
@@ -135,10 +149,11 @@
         <!-- EXEMPLO 3: Adicionar/Remover Classes -->
         <!-- ============================================ -->
         <h2>3️⃣ Adicionando e Removendo Classes</h2>
-        
+
         <div class="exemplo">
             <p>Usar classes CSS é mais eficiente que modificar estilos individuais.</p>
-            <p>Métodos: <code>classList.add()</code>, <code>classList.remove()</code>, <code>classList.toggle()</code></p>
+            <p>Métodos: <code>classList.add()</code>, <code>classList.remove()</code>, <code>classList.toggle()</code>
+            </p>
         </div>
 
         <style>
@@ -149,9 +164,11 @@
                 padding: 20px;
                 border-radius: 8px;
             }
+
             .oculto {
                 display: none;
             }
+
             .visivel {
                 display: block;
             }
@@ -171,7 +188,7 @@
         <!-- EXEMPLO 4: Verificar Classes -->
         <!-- ============================================ -->
         <h2>4️⃣ Verificando Classes - classList.contains()</h2>
-        
+
         <div class="exemplo">
             <p>O método <code>classList.contains()</code> verifica se um elemento tem uma classe.</p>
         </div>
@@ -184,15 +201,15 @@
         <!-- EXEMPLO 5: Animações com Estilos -->
         <!-- ============================================ -->
         <h2>5️⃣ Criando Animações com Estilos</h2>
-        
+
         <div class="exemplo">
             <p>Podemos criar animações modificando estilos com JavaScript.</p>
         </div>
 
         <div class="box-exemplo" id="caixa-animada"></div>
 
-        <button>Animar Caixa</button>
-        <button>Restaurar</button>
+        <button onclick="Animar()">Animar Caixa</button>
+        <button onclick="">Restaurar</button>
 
         <div class="resultado" id="resultado5"></div>
 
@@ -200,7 +217,7 @@
         <!-- RESUMO DOS MÉTODOS -->
         <!-- ============================================ -->
         <h2>📊 Resumo dos Métodos</h2>
-        
+
         <table border="1" cellpadding="10" style="width: 100%; border-collapse: collapse;">
             <tr style="background-color: #ff9800; color: white;">
                 <th>Método/Propriedade</th>
@@ -238,7 +255,7 @@
         <!-- TABELA DE CONVERSÃO CSS PARA JAVASCRIPT -->
         <!-- ============================================ -->
         <h2>📝 Conversão de Propriedades CSS para JavaScript</h2>
-        
+
         <table border="1" cellpadding="10" style="width: 100%; border-collapse: collapse;">
             <tr style="background-color: #ff9800; color: white;">
                 <th>CSS</th>
@@ -266,6 +283,159 @@
             </tr>
         </table>
     </div>
+    <script>
+        function mudarCor(){
+            const elemento = document.getElementById('elemento-estilo');
+
+            elemento.style.backgroundColor = '#ff6b6b'
+
+
+            document.getElementById('resultado1').innerHTML =`
+            <strong>✅ cor modificada!</strong><br>
+            backgroundColor: #ff6bb6`;
+        }
+
+        function mudarTamanho() {
+            const elemento = document.getElementById('elemento-estilo')
+
+            elemento.style.fontSize = '20px'
+
+            document.getElementById('resultado1').innerHTML =`
+            <strong>✅ tamanho da fonte modificada!</strong><br>
+            fonte: 20px`;
+        }
+        function mudarBordar() {
+            const elemento = document.getElementById('elemento-estilo');
+
+            elemento.style.border = '5px solid #4caf50'
+
+            document.getElementById('resultado1').innerHTML =`
+            <strong>✅ tamanho da fonte modificada!</strong><br>
+            bordar: 5px solid`;
+        }
+         function Restaurar() {
+            const elemento = document.getElementById('elemento-estilo');
+
+            elemento.style.removeProperty = ('border');
+            elemento.style.removeProperty = ('backgroundColor');
+            elemento.style.removeProperty  = ('fontSize')
+
+            document.getElementById('resultado1').innerHTML =`
+            <strong>🔄️ restaurado</strong>
+            `;
+         }
+         function aplicarMultiplosEstilos(){
+            const elemento = document.getElementById('elemento-multiplo')
+
+            elemento.style.backgroundColor = '#4caf50';
+            elemento.style.color = 'white'
+            elemento.style.fontSize = '18px'
+            elemento.style.padding = '10px'
+            elemento.style.borderRadius ='10px'
+            elemento.style.textAlign = 'center'
+
+            document.getElementById('resultado2').innerHTML =`
+            <strong>✅ multiplos estilos modificados!</strong>`;
+
+            
+         }
+         function Multiplos(){
+            const elemento = document.getElementById('elemento-multiplo')
+
+            elemento.style.removeProperty = ('backgroundColor');
+            elemento.style.removeProperty = ('color')
+            elemento.style.removeProperty = ('fontSize')
+            
+            document.getElementById('resultado2').innerHTML =`
+            <strong>✅ multiplos estilos modificados!</strong>`;
+         }
+        
+
+         function Animar(){
+            const caixa = document.getElementById('caixa-animada')
+
+            //resetar a posição
+            //antes de começar a animação, garantimos que o elemento volte ao
+            //estado
+            //tranlate(0px) -> posição hor
+
+            caixa.style.transform = 'translateX(0px) rotate(0deg)'
+            caixa.style.backgroundColor = '#2196f3'
+
+            //iniciando a nossa animação
+
+            let posicao = 0;//posição horinizontal (em pixel)
+            let rotacao  = 0;//rotaçaõ (em graus)
+
+            //loop de animação
+            //setinterval escuta a função repetidamnete a cada 50
+            //milisegundos
+             let intervalo = setInterval(() => {
+                // a cada executação,  aumentamos a posição e rotação
+                posicao += 10; //move  10px para direita
+                rotacao += 5;  //gira 5 graus 
+                
+
+            //aplicar movimento
+            //autaliza o estilo tranform com novos valores
+
+            caixa.style.transform = `translateX(${posicao}px) rotate(${rotacao}deg)`;
+
+            //mudar cor
+            //a cada 20px percorridos, a cor muda
+
+            if(posicao % 20 === 0){
+                const cores = ['#2196f3','#ff9800', '#4caf50','#f44336', '#9c27b0']
+
+                //calcula qual acor usar com base na posição
+                //math.floor(posição/20) -> quantas trocas ja aconteceram
+                //% cores.length -> garante que o indice não ultrapasse array
+
+                caixa.style.backgroundColor = cores[Math.floor(posicao/20) % cores.length];
+            }
+
+            if(posicao >= 500){
+                clearInterval(intervalo)
+
+                document.getElementById('resultado5').innerHTML =`
+                <strong>✅ Animação completa </strong><br>
+
+                posição final: ${posicao}px<br>
+                rotacao final: ${rotacao}°`;
+                
+            
+            }  
+
+
+
+            
+         }, 50)//executa a cada 50ms (quanto menor, mais suave a animação)
+
+        }
+
+
+         function restaurarAnimacao() {
+            const caixa = document.getElementById('caixa-animada');
+
+            caixa.style.transform = 'translateX(0px) rotate(0deg)';
+            caixa.style.backgroundColor = '#2196f3';
+
+            document.getElementById('resultado5').innerHTML =
+                ` <strong>🔄️ Restaurado!</strong><br>
+              
+            `;
+
+        }
+
+
+
+    </script>
+ 
+    
+
+
+    </script>
 
 </body>
+
 </html>
