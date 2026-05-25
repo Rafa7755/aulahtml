@@ -209,7 +209,7 @@
         <div class="box-exemplo" id="caixa-animada"></div>
 
         <button onclick="Animar()">Animar Caixa</button>
-        <button onclick="">Restaurar</button>
+        <button onclick="restaurarAnimacao()">Restaurar</button>
 
         <div class="resultado" id="resultado5"></div>
 
@@ -420,8 +420,8 @@
             caixa.style.transform = 'translateX(0px) rotate(0deg)';
             caixa.style.backgroundColor = '#2196f3';
 
-            document.getElementById('resultado5').innerHTML =
-                ` <strong>🔄️ Restaurado!</strong><br>
+            document.getElementById('resultado5').innerHTML =`
+            <strong>🔄️ Restaurado!</strong><br>
               
             `;
 
