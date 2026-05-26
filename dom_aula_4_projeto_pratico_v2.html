@@ -241,10 +241,10 @@
         <!-- BOTÕES DE AÇÃO -->
         <!-- ============================================ -->
         <div class="botoes-acao">
-            <button class="botao-limpar-concluidas">
+            <button onclick= "limparConcluida()"  class="botao-limpar-concluidas">
                 Limpar Concluídas
             </button>
-            <button class="botao-limpar">
+            <button onclick="limparTudo()" class="botao-limpar">
                 Limpar Tudo
             </button>
         </div>
@@ -362,6 +362,20 @@
             // // console.log(tarefa)
              tarefaConcluida.innerText = totalConcluida
  
+            
+        }
+        function limparTudo(){
+            tarefas = [];
+            renderizarTarefas()
+            atualizarEstatisticas()
+
+           
+        }
+        function limparConcluida(){
+            tarefas = [];
+            renderizarTarefas()
+            atualizarEstatisticas()
+
             
         }
     </script>
